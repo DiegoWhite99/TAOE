@@ -1,5 +1,7 @@
 let player_attack
 let enemy_attack
+let lives_player= 3
+let lives_enemy= 3
 
 function startGame() {
     let button_PetsPlayer = document.getElementById('button_pets')
@@ -75,16 +77,27 @@ function  enemy_attack_random() {
 }
 
 function combat() {
+    let spanPlayerLives = document.getElementById('player-lives')
+    let spanEnemyLives = document.getElementById('enemy-lives')
+
     if (player_attack === enemy_attack) {
         Create_message('Tie');
     } else if (player_attack === 'Fire' && enemy_attack === 'Earth') {
         Create_message('Win');
+        lives_enemy--
+        spanEnemyLives.innerHTML = lives_enemy
     } else if (player_attack === 'Water' && enemy_attack === 'Fire') {
         Create_message('Win');
+        lives_enemy--
+        spanEnemyLives.innerHTML = lives_enemy
     } else if (player_attack === 'Earth' && enemy_attack === 'Water') {
         Create_message('Win');
+        lives_enemy--
+        spanEnemyLives.innerHTML = lives_enemy
     } else {
         Create_message('Loose');
+        lives_player--
+        spanPlayerLives.innerHTML = lives_player
     }
 }
 
