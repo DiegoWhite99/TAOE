@@ -1,6 +1,42 @@
-#title {
-    color: #EB953A;
-    width: 310px;
-    height: 85px;
-    background-color: #4A4255;
+.title {
+    color: #F8F9F9;
+    width: 380px;
+    height: 69px;
+    background-color: rgba(48, 99, 104, 0.7);
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+body{
+background-image: url('pictures/picture_fondo.gif');
+background-size: cover;
+background-repeat: no-repeat;
+}
+#Pets_selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_TAOE{
+    width: 100px;
+    height: 100px;
+    background-color: #306368;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid #F8F9F9;
+}
+
+
+.button_pet {
+    width: 70px;
+    height: 50px;
+    background-color: #F5F049;
+    padding: 5px;
+    border: #F8F9F9;
 }
