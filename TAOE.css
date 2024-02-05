@@ -10,11 +10,13 @@
     line-height: 1.5;
 }
 
-body{
-background-image: url('pictures/picture_fondo.gif');
-background-size: cover;
-background-repeat: no-repeat;
-}
+body {
+    background-image: url('pictures/picture_fondo.gif');
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
 #Pets_selection {
     display: flex;
     flex-direction: column;
