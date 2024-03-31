@@ -12,7 +12,6 @@ function startGame() {
     
     let button_PetsPlayer = document.getElementById('button_pets')
     button_PetsPlayer.addEventListener('click', selectPetPlayer)
-
     let button_fire = document.getElementById('button_fire')
     button_fire.addEventListener('click', attack_fire)
     let button_Water = document.getElementById('button_water')
