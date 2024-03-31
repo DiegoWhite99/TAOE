@@ -43,7 +43,7 @@ function selectPetPlayer() {
         } else if(GeoWhinz.checked){
             spanPetsplayer.innerHTML = 'GeoWhinz'
         } else {
-            alert("hey facedick you don't choose nothing! 🫥")
+            alert("hey facedick you don't choose nothing! ")
         }
         select_randomPetEnemy()        
 }
