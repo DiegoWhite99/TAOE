@@ -41,7 +41,7 @@ body{
     border: 1px solid rgba(12, 179, 156, 0.5);
  }
 
- #button{
+ .button{
     font-size: 13px;
     font-family: cursive;
     font-weight: bold;
