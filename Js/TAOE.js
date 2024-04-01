@@ -166,3 +166,4 @@ function Random(min,max) {
 }
 
 window.addEventListener('load', startGame)  
+
