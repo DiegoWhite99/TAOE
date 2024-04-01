@@ -19,6 +19,8 @@ body{
     text-align: center;
 } 
 
+
+
 .elements {
     margin-top: -1%
 }
@@ -30,7 +32,12 @@ body{
     
 }   
 
+.alert1 {
+   color: red;
+   border-bottom-left-radius: 0px;
+   background-color: rgba(75, 133, 148, 0.5);
 
+}
 .card_taoe {
     width: 100px;
     height: 35px;
