@@ -1,19 +1,18 @@
 body{
     background: url("pictures/picture_fondo.gif") no-repeat center center fixed; 
     background-size: cover; 
-    
 }
 
-.title1 {
+.title1,.elements {
     font-family: fantasy;
     font-style: oblique;
     font-variant: small-caps;
     letter-spacing: 3px;
-    color: rgba(247, 246, 242, 0.95);
-    width: 270px ;
-    height: 35px;
-    background-color: rgba(75, 133, 148, 0.5);
-    border-radius: 20px 50%;
+    color: rgb(255, 255, 254);
+    width: 190px ;
+    height: 100px;
+    background-color: rgba(9, 126, 48, 0.699);
+    border-radius: 20px ;
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -33,10 +32,19 @@ body{
 }   
 
 .alert1 {
-   color: red;
-   border-bottom-left-radius: 0px;
-   background-color: rgba(75, 133, 148, 0.5);
-
+    font-family: "Rakkas", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.767);
+    width: 270px ;
+    height: 35px;
+    background-color: rgba(8, 8, 8, 0.699);
+    border-radius: 20px ;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
 }
 .card_taoe {
     width: 100px;
@@ -48,7 +56,8 @@ body{
     border: 1px solid rgba(12, 179, 156, 0.5);
  }
 
- .button{
+ .button_select {
+    border-radius: 10px;
     font-size: 13px;
     font-family: cursive;
     font-weight: bold;
@@ -57,10 +66,27 @@ body{
     height: 25px;
     border-bottom-style: solid;
     background-color: rgb(12, 179, 156, 0.5);
-    border-color: rgb(224, 224, 224);
+   
     box-shadow: 2px 4px 10px 4px rgb(141, 209, 226);
     border-inline-start-color: black; 
     writing-mode: horizontal-tb;
 
- }
+    /* Aplicando la animación */
+    animation-duration: 1.7s; /* Duración de la animación */
+    animation-name: fadeIn; /* Nombre de la animación */
+    animation-iteration-count: infinite; /* Repetir la animación infinitamente */
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.button_select:hover {
+    animation: none;
+}
 
