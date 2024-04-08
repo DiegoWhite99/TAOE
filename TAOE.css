@@ -3,7 +3,9 @@ body{
     background-size: cover; 
 }
 
-.title1,.elements {
+.title1 {
+    display: flex;
+    flex-direction: column;
     font-family: fantasy;
     font-style: oblique;
     font-variant: small-caps;
@@ -15,23 +17,11 @@ body{
     border-radius: 20px ;
     padding: 10px;
     margin: 10px;
-    text-align: center;
 } 
 
-
-
-.elements {
-    margin-top: -1%
-}
-
-#Pets_selection{
+.alert1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-}   
-
-.alert1 {
     font-family: "Rakkas", serif;
     font-weight: 900;
     font-style: normal;
