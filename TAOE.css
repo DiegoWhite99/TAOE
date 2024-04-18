@@ -7,24 +7,28 @@ body{
     display: flex;
     color: aliceblue;
     background-color: rgba(50, 115, 220, 0.3);
-   
-    width: 935px;
+    padding: 10px;
+    width: 310px;
+    height: 50px;
     border-width: 1px;
-    height: 200px;
     justify-content: flex-end;
     align-content: stretch;
     align-items: flex-end;
     flex-direction: row;
     flex-wrap: wrap;
+    border-radius: 20px;
+    border-inline-start-color: rgb(0, 0, 0); 
+    box-shadow: 2px 4px 10px 4px rgba(119, 144, 192, 0.808);
 } 
 
-.alert1 {
-
+#Pets_selection {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
-
-.card_taoe {
-   
- }
 
  .button_select {
     border-radius: 10px;
@@ -36,7 +40,6 @@ body{
     height: 25px;
     border-bottom-style: solid;
     background-color: rgb(12, 179, 156, 0.5);
-   
     box-shadow: 2px 4px 10px 4px rgb(141, 209, 226);
     border-inline-start-color: black; 
     writing-mode: horizontal-tb;
