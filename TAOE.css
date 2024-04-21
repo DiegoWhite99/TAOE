@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body{
     background: url("pictures/picture_fondo.gif") no-repeat center center fixed; 
     background-size: cover; 
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#Pets_selection {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .title1 {
@@ -9,9 +24,9 @@ body{
     background-color: rgba(50, 115, 220, 0.3);
     padding: 10px;
     width: 310px;
-    height: 50px;
+    height: 59px;
     border-width: 1px;
-    justify-content: flex-end;
+    justify-content: center;
     align-content: stretch;
     align-items: flex-end;
     flex-direction: row;
@@ -21,13 +36,49 @@ body{
     box-shadow: 2px 4px 10px 4px rgba(119, 144, 192, 0.808);
 } 
 
-#Pets_selection {
-    color: aliceblue;
+.subtitle{
+font-size: 20px;
+width: 200px;
+height: 40px;
+display: flex;
+justify-content: center;
+color: rgba(240, 180, 15, 0.788);
+background-color:rgba(26, 66, 104, 0.904);
+border-radius: 20px;
+box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
+}
+
+
+.cards{
+display: flex;
+gap: 10px;
+
+
+     
+}
+
+.card_taoe {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    width: 150px;
+    height: 100px;
+    background-color: #948979;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.card_taoe img{
+    width: 60px;
+    height: 87px;
+    display: flex;
     align-items: center;
+}
+
+input {
+    display: none;
 }
 
  .button_select {
@@ -62,4 +113,5 @@ body{
 .button_select:hover {
     animation: none;
 }
+
 
