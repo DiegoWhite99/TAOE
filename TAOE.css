@@ -114,4 +114,49 @@ input {
     animation: none;
 }
 
+#attack_selection{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
+.title2{
+    display: flex;
+    color: aliceblue;
+    background-color: rgba(50, 115, 220, 0.3);
+    padding: 10px;
+    width: 310px;
+    height: 59px;
+    border-width: 1px;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    border-inline-start-color: rgb(0, 0, 0); 
+    box-shadow: 2px 4px 10px 4px rgba(119, 144, 192, 0.808);
+}
+
+.subtitle2 {
+    font-size: 20px;
+width: 200px;
+height: 40px;
+display: flex;
+justify-content: center;
+color: rgba(240, 180, 15, 0.788);
+background-color:rgba(26, 66, 104, 0.904);
+border-radius: 20px;
+box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
+}
+
+
+.attacks_Panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
