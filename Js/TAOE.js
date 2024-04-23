@@ -152,11 +152,12 @@ function Create_message_end (final_result) {
     let ShowReboot = document.getElementById('reboot')
     ShowReboot.style.display = 'block'
 
-    let section_message = document.getElementById('messages')
+    let section_message = document.getElementById('resultado')
     
-    let paragraph = document.createElement('p')
-    paragraph.innerHTML = final_result
-    section_message.appendChild(paragraph)
+    // let paragraph = document.createElement('p')
+    section_message.innerHTML = final_result
+    
+    //section_message.appendChild(paragraph)
 
     let button_fire = document.getElementById('button_fire')
     button_fire.disabled = true
