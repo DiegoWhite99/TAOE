@@ -8,7 +8,6 @@ body{
     font-style: normal;
 }
 
-
 #Pets_selection {
     color: aliceblue;
     display: flex;
@@ -18,10 +17,10 @@ body{
     align-items: center;
 }
 
-.title1 {
+.title1,.title2 {
     display: flex;
     color: aliceblue;
-    background-color: rgba(50, 115, 220, 0.3);
+    background-color: rgba(9, 33, 71, 0.836);
     padding: 10px;
     width: 310px;
     height: 59px;
@@ -36,7 +35,7 @@ body{
     box-shadow: 2px 4px 10px 4px rgba(119, 144, 192, 0.808);
 } 
 
-.subtitle{
+.subtitle1, .subtitle2 {
 font-size: 20px;
 width: 200px;
 height: 40px;
@@ -48,16 +47,13 @@ border-radius: 20px;
 box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
 }
 
-
 .cards{
 display: flex;
-gap: 10px;
-
-
-     
+gap: 10px;     
 }
 
 .card_taoe {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     width: 150px;
@@ -80,8 +76,8 @@ gap: 10px;
 input {
     display: none;
 }
-
- .button_select {
+/*------------------------------------------------Inicio de botton ---------------------------------------------------*/
+.button_select {
     border-radius: 10px;
     font-size: 13px;
     font-family: cursive;
@@ -113,6 +109,8 @@ input {
 .button_select:hover {
     animation: none;
 }
+/* ----------------------------------------------------------- aqui termina la seccion del boton --------------------------------------- */
+
 
 #attack_selection{
     color: aliceblue;
@@ -123,40 +121,41 @@ input {
     align-items: center;
 }
 
-.title2{
-    display: flex;
-    color: aliceblue;
-    background-color: rgba(50, 115, 220, 0.3);
-    padding: 10px;
-    width: 310px;
-    height: 59px;
-    border-width: 1px;
-    justify-content: center;
-    align-content: stretch;
-    align-items: flex-end;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    border-inline-start-color: rgb(0, 0, 0); 
-    box-shadow: 2px 4px 10px 4px rgba(119, 144, 192, 0.808);
-}
-
-.subtitle2 {
-    font-size: 20px;
-width: 200px;
-height: 40px;
-display: flex;
-justify-content: center;
-color: rgba(240, 180, 15, 0.788);
-background-color:rgba(26, 66, 104, 0.904);
-border-radius: 20px;
-box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
-}
-
-
 .attacks_Panel{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
     
+.ataques {
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #948979;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 4px 10px 4px #DFD0B8;
+    border-inline-start-color: whitesmoke;
+    border-color: transparent;
+    width: 150px;
+    font-family: "Bebas Neue", sans-serif;
+    height: 50px;
+    margin: 10px;
+}
+
+#messages {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(19, 46, 51);
+    box-shadow: 2px 4px 10px 4px #DFD0B8;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+}
+

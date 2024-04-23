@@ -29,7 +29,7 @@ function selectPetPlayer() {
     sectPetPlayer_selection.style.display ='none'
 
     let section_attack_selection = document.getElementById('attack_selection')
-    section_attack_selection.style.display ='block'
+    section_attack_selection.style.display ='flex'
 
     let inputEmberWips = document.getElementById('EmberWips')
     let inputHydroquirik = document.getElementById('Hydroquirik')
@@ -126,14 +126,25 @@ function review_lives(){
   }
    
 }
-
+// seccion de la creacion del mensaje
 function Create_message (result) {
-  let section_message = document.getElementById('messages')
-  
-  let paragraph = document.createElement('p')
-  paragraph.innerHTML = 'Your pet attack with '+ player_attack +'   '+ ' the enemy pet attack with '+ enemy_attack +' you '+ result
+  let section_message = document.getElementById('resultado')
+  let ataquesDelJugador = document.getElementById('ataques_del_jugador')
+  let ataquesDelEnemigo= document.getElementById('ataques_del_enemigo')
 
-  section_message.appendChild(paragraph)
+  let nuevoAtaqueDelJugador = document.createElement('p')
+  let nuevoAtaqueDelEnemigo = document.createElement('p')
+
+  section_message.innerHTML = result
+  nuevoAtaqueDelJugador.innerHTML =  player_attack
+  nuevoAtaqueDelEnemigo.innerHTML = enemy_attack
+
+  //let paragraph = document.createElement('p')
+  //paragraph.innerHTML = 'Your pet attack with '+ player_attack +'   '+ ' the enemy pet attack with '+ enemy_attack +' you '+ result
+
+  
+  ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+  ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
 function Create_message_end (final_result) {

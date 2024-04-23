@@ -17,7 +17,7 @@
     
     <section id="Pets_selection">
             <h1 class="title1">The Attack Of Elements! <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;🔥 💧 🌱 </h1> 
-            <h2 class="subtitle"> choose your pet 🦊</h2>
+            <h2 class="subtitle1"> choose your pet 🦊</h2>
 
             <div class="cards">
                 <!--primera pantalla y seleccion de mascotas-->
@@ -43,34 +43,42 @@
             <button class="button_select" onclick="selectPetPlayer()" id="button_pets"> Continuar </button>
         </section>
         
-
+ <!--segunda pantalla y seleccion de ataques -->
     <section id="attack_selection">
 
         <div class="attacks_Panel">
-            <h1 class="title2">The Attack Of Elements! <br> 🔥 💧 🌱 </h1>
+            <h1 class="title2">The Attack Of Elements! <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;🔥 💧 🌱 </h1> 
             
-            <h2 class="subtitle2"> choose your attack : </h2>
+            <h2 class="subtitle2"> choose your attack 💥 </h2>
 
-            <p> your pet <span id="Petsplayer"></span> has <span id="player-lives">3</span> lives </p>
-            <p>The enemy pet <span id="Petsenemy"></span> has <span id="enemy-lives">3</span> lives</p>
+            <div>   
+                <button id="button_fire" class="ataques">Fire🔥</button>
+                <button id="button_water" class="ataques">Water💧</button>
+                <button id="button_earth" class="ataques">Earth🌱</button>
+            </div> 
 
-            <p>
-                <button id="button_fire">Fire🔥</button>
-                <button id="button_water">Water💧</button>
-                <button id="button_earth">Earth🌱</button>
-            </p>
+            <div>
+                <section id="messages">
+                    <p id="resultado"> &#160;&#160;Good Luck <br>💥👊🏻💥 </p>
+                </section> 
+
+                <section id="reboot">
+                    <button id="button_reboot">Reboot</button>
+                </section>
+            </div>
+
+            <div>
+                <div id="ataques_del_jugador"></div>
+                <div id="ataques_del_enemigo"></div>
+                <p> your pet <span id="Petsplayer"></span> has <span id="player-lives">3</span> lives </p>
+                <p>The enemy pet <span id="Petsenemy"></span> has <span id="enemy-lives">3</span> lives</p>   
+            </div>
+            
         </div>
 </section>
 
 
 
-        <section id="messages">
-        </section>
-    
-
-        <section id="reboot">
-            <button id="button_reboot">Reboot</button>
-        </section>
     
 </body>
 </html>
