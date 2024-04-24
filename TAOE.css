@@ -170,3 +170,22 @@ input {
     color:white;
     background-color: rgb(19, 46, 51);
 }
+
+/* --------------------------------------------------------- gameplay -----------------------------------*/
+
+.gamePlay {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    justify-items: center;
+
+
+}
+
+/* --------------------------------------------------------- responsive -----------------------------------*/
+
+@media (max-width: 360px ) {
+    .cards {
+        flex-direction: column;
+    }
+
+}
