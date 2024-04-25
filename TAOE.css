@@ -47,7 +47,7 @@ border-radius: 20px;
 box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
 }
 
-.cards{
+.cards, .cards_attacks{
 display: flex;
 gap: 10px;     
 }
@@ -184,8 +184,9 @@ input {
 /* --------------------------------------------------------- responsive -----------------------------------*/
 
 @media (max-width: 360px ) {
-    .cards {
+    .cards, .cards_attacks {
         flex-direction: column;
     }
 
 }
+
