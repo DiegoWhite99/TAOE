@@ -81,8 +81,6 @@ input:checked + label {
     background-color: rgb(10, 25, 75);
 }
 
-
-
 /*------------------------------------------------Inicio de botton ---------------------------------------------------*/
 .button_select {
     border-radius: 10px;
@@ -117,6 +115,19 @@ input:checked + label {
     animation: none;
 }
 /* ----------------------------------------------------------- aqui termina la seccion del boton --------------------------------------- */
+
+
+#button_fire:hover{ 
+    background: url("./pictures/K98r.gif");
+}
+
+#button_water:hover{
+    background: url("./pictures/water.gif");
+}
+
+#button_earth:hover {
+    background: url("./pictures/200w.gif");
+}
 
 
 #attack_selection{
