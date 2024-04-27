@@ -1,42 +1,50 @@
+// varibles de la funcion starGame //
+const section_attack_selection = document.getElementById('attack_selection')
+const NoShowReboot = document.getElementById('reboot')
+const button_PetsPlayer = document.getElementById('button_pets')
+const button_fire = document.getElementById('button_fire')
+const button_Water = document.getElementById('button_water')
+const button_earth = document.getElementById('button_earth')
+const button_reboot = document.getElementById('button_reboot')
+// varibles de la funcion selectPetPlayer//
+const sectPetPlayer_selection = document.getElementById('Pets_selection')
+const inputEmberWips = document.getElementById('EmberWips')
+const inputHydroquirik = document.getElementById('Hydroquirik')
+const inputGeoWhinz = document.getElementById('GeoWhinz')
+const spanPetsplayer = document.getElementById('Petsplayer')
+// varibles de la funcion select_randomPetEnemy//
+const spanPetsenemy = document.getElementById('Petsenemy')
+// varibles de la funcion combat//
+const spanPlayerLives = document.getElementById('player-lives')
+const spanEnemyLives = document.getElementById('enemy-lives')
+// varibles de la funcion crear un mensaje//
+const section_message = document.getElementById('resultado')
+const ataquesDelJugador = document.getElementById('ataques_del_jugador')
+const ataquesDelEnemigo= document.getElementById('ataques_del_enemigo')
+// varibles de la funcion Create_message_end//
+const ShowReboot = document.getElementById('reboot')
+// las variables de arriba son variables que se usan como fincion //
 let player_attack
 let enemy_attack
-let lives_player= 3
-let lives_enemy= 3
+const lives_player= 3  //
+const lives_enemy= 3
 
 function startGame() {
-    let NoShowReboot = document.getElementById('reboot')
+ 
     NoShowReboot.style.display = 'none'
-
-    let section_attack_selection = document.getElementById('attack_selection')
     section_attack_selection.style.display ='none'
-    
-    let button_PetsPlayer = document.getElementById('button_pets')
     button_PetsPlayer.addEventListener('click', selectPetPlayer)
-
-    let button_fire = document.getElementById('button_fire')
     button_fire.addEventListener('click', attack_fire)
-    let button_Water = document.getElementById('button_water')
     button_Water.addEventListener('click', attack_water)
-    let button_earth = document.getElementById('button_earth')
     button_earth.addEventListener('click', attack_earth)
-
-    let button_reboot = document.getElementById('button_reboot')
     button_reboot.addEventListener('click', reboot_game)
 }
 
 function selectPetPlayer() {
-    let sectPetPlayer_selection = document.getElementById('Pets_selection')
+   
     sectPetPlayer_selection.style.display ='none'
-
-    let section_attack_selection = document.getElementById('attack_selection')
     section_attack_selection.style.display ='flex'
-
-    let inputEmberWips = document.getElementById('EmberWips')
-    let inputHydroquirik = document.getElementById('Hydroquirik')
-    let inputGeoWhinz = document.getElementById('GeoWhinz')
-    let spanPetsplayer = document.getElementById('Petsplayer')
-
-        if(EmberWips.checked){
+         if(EmberWips.checked){
            spanPetsplayer.innerHTML = 'EmberWips'
         } else if(Hydroquirik.checked){
             spanPetsplayer.innerHTML = 'Hydroquirik'
@@ -48,9 +56,10 @@ function selectPetPlayer() {
         select_randomPetEnemy()        
 }
 
+
 function select_randomPetEnemy() {
+    
     let PetAttackRandom = Random(1,3)
-    let spanPetsenemy = document.getElementById('Petsenemy')
 
         if(PetAttackRandom == 1 ){
             spanPetsenemy.innerHTML = 'EmberWips'
@@ -92,9 +101,7 @@ function  enemy_attack_random() {
 }
 
 function combat() {
-    let spanPlayerLives = document.getElementById('player-lives')
-
-    let spanEnemyLives = document.getElementById('enemy-lives')
+  
 
     if (player_attack === enemy_attack) {
         Create_message('Tie');
@@ -128,10 +135,7 @@ function review_lives(){
 }
 // seccion de la creacion del mensaje
 function Create_message (result) {
-  let section_message = document.getElementById('resultado')
-  let ataquesDelJugador = document.getElementById('ataques_del_jugador')
-  let ataquesDelEnemigo= document.getElementById('ataques_del_enemigo')
-
+ 
   let nuevoAtaqueDelJugador = document.createElement('p')
   let nuevoAtaqueDelEnemigo = document.createElement('p')
 
@@ -139,33 +143,21 @@ function Create_message (result) {
   nuevoAtaqueDelJugador.innerHTML =  player_attack
   nuevoAtaqueDelEnemigo.innerHTML = enemy_attack
 
-  //let paragraph = document.createElement('p')
-  //paragraph.innerHTML = 'Your pet attack with '+ player_attack +'   '+ ' the enemy pet attack with '+ enemy_attack +' you '+ result
-
-  
   ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
   ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
 function Create_message_end (final_result) {
     
-    let ShowReboot = document.getElementById('reboot')
+   
     ShowReboot.style.display = 'block'
 
-    let section_message = document.getElementById('resultado')
-    
-    // let paragraph = document.createElement('p')
     section_message.innerHTML = final_result
     
-    //section_message.appendChild(paragraph)
-
-    let button_fire = document.getElementById('button_fire')
     button_fire.disabled = true
 
-    let button_Water = document.getElementById('button_water')
     button_Water.disabled = true
 
-    let button_earth = document.getElementById('button_earth')
     button_earth.disabled =true
   }
 
