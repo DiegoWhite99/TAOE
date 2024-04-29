@@ -29,6 +29,7 @@ const ShowReboot = document.getElementById('reboot')
 let Monsters = [ ] // esto es un array
 let player_attack
 let enemy_attack
+<<<<<<< Updated upstream
 let lives_player= 3  // estas son variables let esto quiere decir es estan cambian o varian segun  las condicion.//
 let lives_enemy= 3
 // creacion de claeses y objetos 
@@ -58,6 +59,10 @@ EmberWips.attacks.push(
     { name: '🌱', id: 'button_earth'},
 )
 
+=======
+let lives_player= 3  //
+let lives_enemy= 3
+>>>>>>> Stashed changes
 
 function startGame() {
  
