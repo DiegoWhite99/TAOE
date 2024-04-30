@@ -7,7 +7,7 @@ const button_Water = document.getElementById('button_water')
 const button_earth = document.getElementById('button_earth')
 const button_reboot = document.getElementById('button_reboot')
 // varibles de la funcion selectPetPlayer//
-const sectPetPlayer_selection = document.getElementById('Pets_selection')
+const selectPetPlayer_selection = document.getElementById('Pets_selection')
 const inputEmberWips = document.getElementById('EmberWips')
 const inputHydroquirik = document.getElementById('Hydroquirik')
 const inputGeoWhinz = document.getElementById('GeoWhinz')
@@ -26,7 +26,7 @@ const ShowReboot = document.getElementById('reboot')
 // las variables de arriba son variables que se usan como fincion //
 
 // las variables const como dice su enunciado son aquellas que se mantienen constantes sin que se altere su estado //
-let Monsters = [ ] // esto es un array
+let Monsters = []
 let player_attack
 let enemy_attack
 let lives_player = 3  // estas son variables let esto quiere decir es estan cambian o varian segun  las condicion.//
@@ -39,7 +39,6 @@ class Monster {
         this.life = life
         this.attacks = [ ]
     }
-
 }
 // el codigo de arriba es la clase
 let EmberWips = new Monster ('EmberWips','./pictures/characters/vulpera-wow.gif',3)
@@ -58,6 +57,21 @@ EmberWips.attacks.push(
     { name: '🌱', id: 'button_earth'},
 )
 
+Hydroquirik.attacks.push(
+    {name:'🔥', id: 'button_fire'},
+    {name:'🔥', id: 'button_fire'},
+    {name:'🔥', id: 'button_fire'},
+    { name: '🌱', id: 'button_earth'},
+    { name: '🌱', id: 'button_earth'},
+)
+
+GeoWhinz.attacks.push(
+    { name: '🌱', id: 'button_earth'},
+    { name: '🌱', id: 'button_earth'},
+    { name: '🌱', id: 'button_earth'},
+    { name: '💧', id: 'button_water' },
+    { name: '🔥', id: 'button_fire' }, 
+)
 
 function startGame() {
  
@@ -72,7 +86,7 @@ function startGame() {
 
 function selectPetPlayer() {
    
-    sectPetPlayer_selection.style.display ='none'
+    selectPetPlayer_selection.style.display ='none'
     section_attack_selection.style.display ='flex'
          if(EmberWips.checked){
            spanPetsplayer.innerHTML = 'EmberWips'
