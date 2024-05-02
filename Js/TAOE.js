@@ -29,6 +29,7 @@ const ShowReboot = document.getElementById('reboot')
 let Monsters = []
 let player_attack
 let enemy_attack
+let opcion_Monsters
 let lives_player = 3  // estas son variables let esto quiere decir es estan cambian o varian segun  las condicion.//
 let lives_enemy= 3
 // creacion de claeses y objetos 
@@ -37,7 +38,7 @@ class Monster {
         this.name = name
         this.picture = picture
         this.life = life
-        this.attacks = [ ]
+        this.attacks = []
     }
 }
 // el codigo de arriba es la clase
@@ -48,7 +49,6 @@ let Hydroquirik = new Monster ('Hydroquirik','./pictures/characters/druid-cat-da
 let GeoWhinz = new Monster ('GeoWhinz', ' ./pictures/characters/world-of-warcraft-monster-warcraft-monster.gif', 3)
 // los de arriba son los objetos//
 
-// Monsters.push(EmberWips,Hydroquirik,GeoWhinz) // esto es un metodo
 EmberWips.attacks.push(
     { name: '💧', id: 'button_water' },
     { name: '💧', id: 'button_water' },
@@ -73,14 +73,30 @@ GeoWhinz.attacks.push(
     { name: '🔥', id: 'button_fire' }, 
 )
 
+Monsters.push(EmberWips,Hydroquirik,GeoWhinz)
+
+
 function startGame() {
- 
-    NoShowReboot.style.display = 'none'
     section_attack_selection.style.display ='none'
+
+     Monsters.forEach((Monster) => {
+        opcion_Monsters = `   
+            <input type="radio" name="pets" id=${ Monster.name}/> 
+            <label class="card_taoe" for="EmberWips">
+                <p>EmberWips</p>
+                <img src="./pictures/characters/vulpera-wow.gif" alt="dragon_fly">
+            </label>
+        `
+     })
+
     button_PetsPlayer.addEventListener('click', selectPetPlayer)
+
     button_fire.addEventListener('click', attack_fire)
+
     button_Water.addEventListener('click', attack_water)
+
     button_earth.addEventListener('click', attack_earth)
+
     button_reboot.addEventListener('click', reboot_game)
 }
 
