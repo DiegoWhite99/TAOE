@@ -24,12 +24,13 @@ const ataquesDelEnemigo= document.getElementById('ataques_del_enemigo')
 // varibles de la funcion Create_message_end//
 const ShowReboot = document.getElementById('reboot')
 // las variables de arriba son variables que se usan como fincion //
-
+const contenedorCards = document.getElementById('contenedorCards')
 // las variables const como dice su enunciado son aquellas que se mantienen constantes sin que se altere su estado //
 let Monsters = []
 let player_attack
 let enemy_attack
 let opcion_Monsters
+
 let lives_player = 3  // estas son variables let esto quiere decir es estan cambian o varian segun  las condicion.//
 let lives_enemy= 3
 // creacion de claeses y objetos 
@@ -82,11 +83,13 @@ function startGame() {
      Monsters.forEach((Monster) => {
         opcion_Monsters = `   
             <input type="radio" name="pets" id=${ Monster.name}/> 
-            <label class="card_taoe" for="EmberWips">
-                <p>EmberWips</p>
-                <img src="./pictures/characters/vulpera-wow.gif" alt="dragon_fly">
+            <label class="card_taoe" for=${ Monster.name}>
+                <p>${ Monster.name}</p>
+                <img src=${ Monster.picture} alt=${ Monster.name}>
             </label>
         `
+    contenedorCards.innerHTML+= opcion_Monsters
+
      })
 
     button_PetsPlayer.addEventListener('click', selectPetPlayer)
