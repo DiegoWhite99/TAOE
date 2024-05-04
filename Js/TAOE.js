@@ -9,7 +9,7 @@ const button_reboot = document.getElementById('button_reboot')
 // varibles de la funcion selectPetPlayer//
 const selectPetPlayer_selection = document.getElementById('Pets_selection')
 
-const spanPetsplayer = document.getElementById('Petsplayer')
+//const spanPetsplayer = document.getElementById('Petsplayer')//
 // varibles de la funcion select_randomPetEnemy//
 const spanPetsenemy = document.getElementById('Petsenemy')
 // varibles de la funcion combat//
@@ -24,7 +24,7 @@ const ShowReboot = document.getElementById('reboot')
 // las variables de arriba son variables que se usan como fincion //
 const contenedorCards = document.getElementById('contenedorCards')
 // las variables const como dice su enunciado son aquellas que se mantienen constantes sin que se altere su estado //
-let Monsters = []
+let Monsters = [ ]
 let player_attack
 let enemy_attack
 let opcion_Monsters
@@ -43,11 +43,11 @@ class Monster {
     }
 }
 // el codigo de arriba es la clase
-let EmberWips = new Monster ('EmberWips','./pictures/characters/vulpera-wow.gif',3)
+let EmberWips = new Monster ('EmberWips','./pictures/characters/vulpera-wow.gif',5)
 
-let Hydroquirik = new Monster ('Hydroquirik','./pictures/characters/druid-cat-dance-druid.gif',3)
+let Hydroquirik = new Monster ('Hydroquirik','./pictures/characters/druid-cat-dance-druid.gif',5)
 
-let GeoWhinz = new Monster ('GeoWhinz', ' ./pictures/characters/world-of-warcraft-monster-warcraft-monster.gif', 3)
+let GeoWhinz = new Monster ('GeoWhinz', ' ./pictures/characters/world-of-warcraft-monster-warcraft-monster.gif', 5)
 // los de arriba son los objetos//
 
 EmberWips.attacks.push(
@@ -82,10 +82,10 @@ function startGame() {
 
      Monsters.forEach((Monster) => {
         opcion_Monsters = `   
-            <input type="radio" name="pets" id=${ Monster.name}/> 
-            <label class="card_taoe" for=${ Monster.name}>
-                <p>${ Monster.name}</p>
-                <img src=${ Monster.picture} alt=${ Monster.name}>
+            <input type="radio" name="pets" id=${ Monster.name }/> 
+            <label class="card_taoe" for=${ Monster.name }>
+                <p>${ Monster.name }</p>
+                <img src=${ Monster.picture } alt=${ Monster.name }>
             </label>
         `
     contenedorCards.innerHTML+= opcion_Monsters
@@ -118,7 +118,7 @@ function selectPetPlayer() {
         } else if(GeoWhinz.checked){
             spanPetsplayer.innerHTML = 'GeoWhinz'
         } else {
-            alert("hey facedick you don't choose nothing! ")
+            alert("hey  you don't select ")
         }
         select_randomPetEnemy()        
 }
