@@ -8,9 +8,7 @@ const button_earth = document.getElementById('button_earth')
 const button_reboot = document.getElementById('button_reboot')
 // varibles de la funcion selectPetPlayer//
 const selectPetPlayer_selection = document.getElementById('Pets_selection')
-const inputEmberWips = document.getElementById('EmberWips')
-const inputHydroquirik = document.getElementById('Hydroquirik')
-const inputGeoWhinz = document.getElementById('GeoWhinz')
+
 const spanPetsplayer = document.getElementById('Petsplayer')
 // varibles de la funcion select_randomPetEnemy//
 const spanPetsenemy = document.getElementById('Petsenemy')
@@ -30,7 +28,9 @@ let Monsters = []
 let player_attack
 let enemy_attack
 let opcion_Monsters
-
+let inputEmberWips 
+let inputHydroquirik 
+let inputGeoWhinz 
 let lives_player = 3  // estas son variables let esto quiere decir es estan cambian o varian segun  las condicion.//
 let lives_enemy= 3
 // creacion de claeses y objetos 
@@ -89,6 +89,10 @@ function startGame() {
             </label>
         `
     contenedorCards.innerHTML+= opcion_Monsters
+
+    inputEmberWips = document.getElementById('EmberWips')
+    inputHydroquirik = document.getElementById('Hydroquirik')
+    inputGeoWhinz = document.getElementById('GeoWhinz')
 
      })
 
