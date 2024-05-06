@@ -59,8 +59,8 @@ Hydroquirik.attacks.push(
     {name:'🔥', id: 'button_fire'},
     {name:'🔥', id: 'button_fire'},
     {name:'🔥', id: 'button_fire'},
-    { name: '🌱', id: 'button_earth'},
-    { name: '🌱', id: 'button_earth'},
+    { name:'🌱', id: 'button_earth'},
+    { name:'🌱', id: 'button_earth'},
 )
 
 GeoWhinz.attacks.push(
@@ -86,7 +86,7 @@ function startGame() {
                 <img src=${ Monster.picture } alt=${ Monster.name }>
             </label>
         `
-    contenedorCards.innerHTML+= opcion_Monsters
+    contenedorCards.innerHTML += opcion_Monsters
 
     inputEmberWips = document.getElementById('EmberWips')
     inputHydroquirik = document.getElementById('Hydroquirik')
@@ -98,7 +98,7 @@ function startGame() {
 
     button_fire.addEventListener('click', attack_fire)
 
-    button_Water.addEventListener('click', attack_water)
+    button_water.addEventListener('click', attack_water)
 
     button_earth.addEventListener('click', attack_earth)
 
@@ -107,7 +107,9 @@ function startGame() {
 
 function selectPetPlayer() {
    
-    selectPetPlayer_selection.style.display ='none'
+    sectionPets_selection.style.display ='none'
+
+
 
     section_attack_selection.style.display ='flex'
 
@@ -223,7 +225,7 @@ function Create_message_end (final_result) {
     
     button_fire.disabled = true
 
-    button_Water.disabled = true
+    button_water.disabled = true
 
     button_earth.disabled =true
 
