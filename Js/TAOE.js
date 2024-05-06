@@ -1,16 +1,16 @@
 // varibles de la funcion starGame //
 const section_attack_selection = document.getElementById('attack_selection')
-const NoShowReboot = document.getElementById('reboot')
+const sectionReboot = document.getElementById('reboot')
 const button_PetsPlayer = document.getElementById('button_pets')
-const button_fire = document.getElementById('button_fire')
-const button_Water = document.getElementById('button_water')
 const button_earth = document.getElementById('button_earth')
+sectionReboot.style.display = 'none'
+const button_fire = document.getElementById('button_fire')
+const button_water = document.getElementById('button_water')
 const button_reboot = document.getElementById('button_reboot')
 // varibles de la funcion selectPetPlayer//
-const selectPetPlayer_selection = document.getElementById('Pets_selection')
-
-//const spanPetsplayer = document.getElementById('Petsplayer')//
-// varibles de la funcion select_randomPetEnemy//
+const sectionPets_selection = document.getElementById('Pets_selection')
+const spanPetsplayer = document.getElementById('Petsplayer')
+// espacio de enemigo//
 const spanPetsenemy = document.getElementById('Petsenemy')
 // varibles de la funcion combat//
 const spanPlayerLives = document.getElementById('player-lives')
@@ -19,12 +19,9 @@ const spanEnemyLives = document.getElementById('enemy-lives')
 const section_message = document.getElementById('resultado')
 const ataquesDelJugador = document.getElementById('ataques_del_jugador')
 const ataquesDelEnemigo= document.getElementById('ataques_del_enemigo')
-// varibles de la funcion Create_message_end//
-const ShowReboot = document.getElementById('reboot')
-// las variables de arriba son variables que se usan como fincion //
 const contenedorCards = document.getElementById('contenedorCards')
 // las variables const como dice su enunciado son aquellas que se mantienen constantes sin que se altere su estado //
-let Monsters = [ ]
+let Monsters = []
 let player_attack
 let enemy_attack
 let opcion_Monsters
@@ -78,6 +75,7 @@ Monsters.push(EmberWips,Hydroquirik,GeoWhinz)
 
 
 function startGame() {
+    
     section_attack_selection.style.display ='none'
 
      Monsters.forEach((Monster) => {
@@ -110,7 +108,11 @@ function startGame() {
 function selectPetPlayer() {
    
     selectPetPlayer_selection.style.display ='none'
+
     section_attack_selection.style.display ='flex'
+
+    
+
          if(EmberWips.checked){
            spanPetsplayer.innerHTML = 'EmberWips'
         } else if(Hydroquirik.checked){
@@ -216,8 +218,6 @@ function Create_message (result) {
 
 function Create_message_end (final_result) {
     
-   
-    ShowReboot.style.display = 'block'
 
     section_message.innerHTML = final_result
     
@@ -226,6 +226,8 @@ function Create_message_end (final_result) {
     button_Water.disabled = true
 
     button_earth.disabled =true
+
+    sectionReboot.style.display = 'block'
   }
 
   function reboot_game (){
