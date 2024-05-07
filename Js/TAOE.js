@@ -1,7 +1,7 @@
 // varibles de la funcion starGame //
 const section_attack_selection = document.getElementById('attack_selection')
 const sectionReboot = document.getElementById('reboot')
-const button_PetsPlayer = document.getElementById('button_pets')
+const button_Petsplayer = document.getElementById('button_pets')
 const button_earth = document.getElementById('button_earth')
 sectionReboot.style.display = 'none'
 const button_fire = document.getElementById('button_fire')
@@ -94,7 +94,7 @@ function startGame() {
 
      })
 
-    button_PetsPlayer.addEventListener('click', selectPetPlayer)
+    button_Petsplayer.addEventListener('click', selectPetsplayer)
 
     button_fire.addEventListener('click', attack_fire)
 
@@ -105,7 +105,7 @@ function startGame() {
     button_reboot.addEventListener('click', reboot_game)
 }
 
-function selectPetPlayer() {
+function selectPetsplayer() {
    
     sectionPets_selection.style.display ='none'
 
