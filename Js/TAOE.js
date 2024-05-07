@@ -109,9 +109,8 @@ function selectPetsplayer() {
    
     sectionPets_selection.style.display ='none'
 
-
-
     section_attack_selection.style.display ='flex'
+    
 
     if (document.getElementById('EmberWips').checked) {
         spanPetsplayer.innerHTML = 'EmberWips';
