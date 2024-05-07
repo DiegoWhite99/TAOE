@@ -80,12 +80,12 @@ function startGame() {
 
      Monsters.forEach((Monster) => {
         opcion_Monsters = `   
-            <input type="radio" name="pets" id=${ Monster.name }/> 
-            <label class="card_taoe" for=${ Monster.name }>
-                <p>${ Monster.name }</p>
-                <img src=${ Monster.picture } alt=${ Monster.name }>
-            </label>
-        `
+        <input type="radio" name="pets" id="${Monster.name}"/> 
+        <label class="card_taoe" for="${Monster.name}">
+            <p>${Monster.name}</p>
+            <img src="${Monster.picture}" alt="${Monster.name}">
+        </label>
+    ` 
     contenedorCards.innerHTML += opcion_Monsters
 
     inputEmberWips = document.getElementById('EmberWips')
@@ -113,17 +113,16 @@ function selectPetsplayer() {
 
     section_attack_selection.style.display ='flex'
 
-    
+    if (document.getElementById('EmberWips').checked) {
+        spanPetsplayer.innerHTML = 'EmberWips';
+    } else if (document.getElementById('Hydroquirik').checked) {
+        spanPetsplayer.innerHTML = 'Hydroquirik';
+    } else if (document.getElementById('GeoWhinz').checked) {
+        spanPetsplayer.innerHTML = 'GeoWhinz';
+    } else {
+        alert("Hey, you didn't select a pet!");
+    }
 
-         if(EmberWips.checked){
-           spanPetsplayer.innerHTML = 'EmberWips'
-        } else if(Hydroquirik.checked){
-            spanPetsplayer.innerHTML = 'Hydroquirik'
-        } else if(GeoWhinz.checked){
-            spanPetsplayer.innerHTML = 'GeoWhinz'
-        } else {
-            alert("hey  you don't select ")
-        }
         select_randomPetEnemy()        
 }
 
