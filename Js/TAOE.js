@@ -79,7 +79,7 @@ function startGame() {
     section_attack_selection.style.display ='none'
 
      Monsters.forEach((Monster) => {
-        opcion_Monsters = `   
+        opcion_Monsters = ` 
         <input type="radio" name="pets" id="${Monster.name}"/> 
         <label class="card_taoe" for="${Monster.name}">
             <p>${Monster.name}</p>
