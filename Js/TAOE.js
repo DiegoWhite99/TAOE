@@ -78,7 +78,7 @@ function startGame() {
     
     section_attack_selection.style.display ='none'
 
-     Monsters.forEach((Monster) => {
+     Monsters.forEach((Monster) => {  // forma de invocar una  iteracion: nos arroga un dato y este se inyecta en un id del html.
         opcion_Monsters = ` 
         <input type="radio" name="pets" id="${Monster.name}"/> 
         <label class="card_taoe" for="${Monster.name}">
@@ -112,12 +112,12 @@ function selectPetsplayer() {
     section_attack_selection.style.display ='flex'
     
 
-    if (document.getElementById('EmberWips').checked) {
-        spanPetsplayer.innerHTML = 'EmberWips';
-    } else if (document.getElementById('Hydroquirik').checked) {
-        spanPetsplayer.innerHTML = 'Hydroquirik';
-    } else if (document.getElementById('GeoWhinz').checked) {
-        spanPetsplayer.innerHTML = 'GeoWhinz';
+    if (inputEmberWips.checked) {
+        spanPetsplayer.innerHTML = inputEmberWips.id;
+    } else if (inputHydroquirik.checked) {
+        spanPetsplayer.innerHTML = inputHydroquirik.id;
+    } else if (inputGeoWhinz.checked) {
+        spanPetsplayer.innerHTML = inputGeoWhinz.id;
     } else {
         alert("Hey, you didn't select a pet!");
     }
@@ -128,16 +128,10 @@ function selectPetsplayer() {
 
 function select_randomPetEnemy() {
     
-    let PetAttackRandom = Random(1,3)
+    let PetAttackRandom = Random(0, Monsters.length -1) // este arreglo me siplifica el dato a recibir y me limita a un rango de tre sposiciones desde el 0 al 2, teniendo en cuenta que el -1 es el limite 
 
-        if(PetAttackRandom == 1 ){
-            spanPetsenemy.innerHTML = 'EmberWips'
-        } else if (PetAttackRandom == 2 ){
-            spanPetsenemy.innerHTML = 'Hydroquirik'
-        } else{
-            spanPetsenemy.innerHTML = 'GeoWhinz'
-        }
-  
+    spanPetsenemy.innerHTML = Monsters[ PetAttackRandom].name // , asignamos a la variable 'PetEnemy' (o 'Enemy') el monstruo enemigo seleccionado aleatoriamente del array 'Monsters', utilizando el índice aleatorio generado por 'PetAttackRandom'. Esto nos permite representar al monstruo enemigo actual que será atacado por nuestras mascotas.
+   
 }
 
 function attack_fire() {
