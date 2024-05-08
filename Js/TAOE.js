@@ -2,11 +2,8 @@
 const section_attack_selection = document.getElementById('attack_selection')
 const sectionReboot = document.getElementById('reboot')
 const button_Petsplayer = document.getElementById('button_pets')
-const button_earth = document.getElementById('button_earth')
-sectionReboot.style.display = 'none'
-const button_fire = document.getElementById('button_fire')
-const button_water = document.getElementById('button_water')
 const button_reboot = document.getElementById('button_reboot')
+sectionReboot.style.display = 'none'
 // varibles de la funcion selectPetPlayer//
 const sectionPets_selection = document.getElementById('Pets_selection')
 const spanPetsplayer = document.getElementById('Petsplayer')
@@ -31,7 +28,10 @@ let inputEmberWips
 let inputHydroquirik 
 let inputGeoWhinz 
 let petPlayer
-let ataquesMonsters
+let ataquesMonster
+let button_fire 
+let button_water 
+let button_earth 
 let lives_player = 3  // estas son variables let esto quiere decir es estan cambian o varian segun  las condicion.//
 let lives_enemy= 3
 // creacion de claeses y objetos 
@@ -137,20 +137,25 @@ function selectPetsplayer() {
 }
 
 
-function extraerAtaques(petPlayer) {
-    let ataques
-    for (let i = 0; i < Monsters.length; i++) {
-      if(petPlayer === Monsters[i].name) {
-            ataques = Monsters[i].ataques
-      }
-        
-    }
-    mostrarAtaques(ataques)
+function mostrarAtaques(ataques) {
+    ataques.forEach((ataque) => {
+        ataquesMonster = `
+            <button id=${ataque.id} class="ataques">${ataque.name}</button>
+        `;
+        contenedorAtaques.innerHTML += ataquesMonster;
+    });
+
+    // Definir los botones de ataque después de agregarlos al DOM
+    button_fire = document.getElementById('button_fire');
+    button_water = document.getElementById('button_water');
+    button_earth = document.getElementById('button_earth');
+    
+    // Agregar eventos de clic para los botones de ataque después de definirlos
+    button_fire.addEventListener('click', attack_fire);
+    button_water.addEventListener('click', attack_water);
+    button_earth.addEventListener('click', attack_earth);
 }
 
-function mostrarAtaques() {
-
-}
 
 function select_randomPetEnemy() {
     
