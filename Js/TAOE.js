@@ -28,6 +28,7 @@ let opcion_Monsters
 let inputEmberWips 
 let inputHydroquirik 
 let inputGeoWhinz 
+let petPlayer
 let lives_player = 3  // estas son variables let esto quiere decir es estan cambian o varian segun  las condicion.//
 let lives_enemy= 3
 // creacion de claeses y objetos 
@@ -96,6 +97,8 @@ function startGame() {
 
     button_Petsplayer.addEventListener('click', selectPetsplayer)
 
+    
+
     button_fire.addEventListener('click', attack_fire)
 
     button_water.addEventListener('click', attack_water)
@@ -113,24 +116,44 @@ function selectPetsplayer() {
     
 
     if (inputEmberWips.checked) {
-        spanPetsplayer.innerHTML = inputEmberWips.id;
+        spanPetsplayer.innerHTML = inputEmberWips.id
+        petPlayer = EmberWips.id
     } else if (inputHydroquirik.checked) {
-        spanPetsplayer.innerHTML = inputHydroquirik.id;
+        spanPetsplayer.innerHTML = inputHydroquirik.id
+        petPlayer = Hydroquirik.id
     } else if (inputGeoWhinz.checked) {
-        spanPetsplayer.innerHTML = inputGeoWhinz.id;
+        spanPetsplayer.innerHTML = inputGeoWhinz.id
+        petPlayer = GeoWhinz.id
     } else {
-        alert("Hey, you didn't select a pet!");
+        alert("Hey, you didn't select a pet!")
     }
 
+    extraerAtaques(petPlayer)
         select_randomPetEnemy()        
 }
 
 
+function extraerAtaques(petPlayer) {
+    let ataques
+    for (let i = 0; i < Monsters.length; i++) {
+      if(petPlayer === Monsters[i].name) {
+            ataques = Monsters[i].ataques
+      }
+        
+    }
+    console.log(ataques);
+}
+
 function select_randomPetEnemy() {
     
-    let PetAttackRandom = Random(0, Monsters.length -1) // este arreglo me siplifica el dato a recibir y me limita a un rango de tre sposiciones desde el 0 al 2, teniendo en cuenta que el -1 es el limite 
+    let PetAttackRandom = Random(0, Monsters.length -1) /* este arreglo me siplifica el dato a 
+    recibir y me limita a un rango de tre sposiciones desde el 0 al 2, teniendo en cuenta que el -1 es el limite */
 
-    spanPetsenemy.innerHTML = Monsters[ PetAttackRandom].name // , asignamos a la variable 'PetEnemy' (o 'Enemy') el monstruo enemigo seleccionado aleatoriamente del array 'Monsters', utilizando el índice aleatorio generado por 'PetAttackRandom'. Esto nos permite representar al monstruo enemigo actual que será atacado por nuestras mascotas.
+
+    spanPetsenemy.innerHTML = Monsters[ PetAttackRandom].name /*
+    asignamos a la variable 'PetEnemy' (o 'Enemy') el monstruo enemigo seleccionado aleatoriamente del array 'Monsters',
+     utilizando el índice aleatorio generado por 'PetAttackRandom'.
+     Esto nos permite representar al monstruo enemigo actual que será atacado por nuestras mascotas. */
    
 }
 
