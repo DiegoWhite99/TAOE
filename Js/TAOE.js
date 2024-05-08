@@ -145,12 +145,12 @@ function mostrarAtaques(ataques) {
         contenedorAtaques.innerHTML += ataquesMonster;
     });
 
-    // Definir los botones de ataque después de agregarlos al DOM
+  
     button_fire = document.getElementById('button_fire');
     button_water = document.getElementById('button_water');
     button_earth = document.getElementById('button_earth');
     
-    // Agregar eventos de clic para los botones de ataque después de definirlos
+   
     button_fire.addEventListener('click', attack_fire);
     button_water.addEventListener('click', attack_water);
     button_earth.addEventListener('click', attack_earth);
