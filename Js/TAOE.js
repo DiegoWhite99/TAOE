@@ -21,6 +21,8 @@ const ataquesDelJugador = document.getElementById('ataques_del_jugador')
 const ataquesDelEnemigo= document.getElementById('ataques_del_enemigo')
 const contenedorCards = document.getElementById('contenedorCards')
 // las variables const como dice su enunciado son aquellas que se mantienen constantes sin que se altere su estado //
+const contenedorAtaques = document.getElementById('contenedorAtaques')
+
 let Monsters = []
 let player_attack
 let enemy_attack
@@ -29,6 +31,7 @@ let inputEmberWips
 let inputHydroquirik 
 let inputGeoWhinz 
 let petPlayer
+let ataquesMonsters
 let lives_player = 3  // estas son variables let esto quiere decir es estan cambian o varian segun  las condicion.//
 let lives_enemy= 3
 // creacion de claeses y objetos 
@@ -117,19 +120,20 @@ function selectPetsplayer() {
 
     if (inputEmberWips.checked) {
         spanPetsplayer.innerHTML = inputEmberWips.id
-        petPlayer = EmberWips.id
+        petPlayer = inputEmberWips.id
     } else if (inputHydroquirik.checked) {
         spanPetsplayer.innerHTML = inputHydroquirik.id
-        petPlayer = Hydroquirik.id
+        petPlayer = inputHydroquirik.id
     } else if (inputGeoWhinz.checked) {
         spanPetsplayer.innerHTML = inputGeoWhinz.id
-        petPlayer = GeoWhinz.id
+        petPlayer = inputGeoWhinz.id
     } else {
         alert("Hey, you didn't select a pet!")
     }
 
+       
     extraerAtaques(petPlayer)
-        select_randomPetEnemy()        
+    select_randomPetEnemy()    
 }
 
 
@@ -141,7 +145,11 @@ function extraerAtaques(petPlayer) {
       }
         
     }
-    console.log(ataques);
+    mostrarAtaques(ataques)
+}
+
+function mostrarAtaques() {
+
 }
 
 function select_randomPetEnemy() {
