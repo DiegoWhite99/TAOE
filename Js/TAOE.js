@@ -141,19 +141,19 @@ function mostrarAtaques(ataques) {
     ataques.forEach((ataque) => {
         ataquesMonster = `
             <button id=${ataque.id} class="ataques">${ataque.name}</button>
-        `;
-        contenedorAtaques.innerHTML += ataquesMonster;
+        `
+        contenedorAtaques.innerHTML += ataquesMonster
     });
 
   
-    button_fire = document.getElementById('button_fire');
-    button_water = document.getElementById('button_water');
-    button_earth = document.getElementById('button_earth');
+    button_fire = document.getElementById('button_fire')
+    button_water = document.getElementById('button_water')
+    button_earth = document.getElementById('button_earth')
     
    
-    button_fire.addEventListener('click', attack_fire);
-    button_water.addEventListener('click', attack_water);
-    button_earth.addEventListener('click', attack_earth);
+    button_fire.addEventListener('click', attack_fire)
+    button_water.addEventListener('click', attack_water)
+    button_earth.addEventListener('click', attack_earth)
 }
 
 
