@@ -1,224 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
 
-body{
-    background: url("pictures/picture_fondo.gif") no-repeat center center fixed; 
-    background-size: cover; 
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('/pictures/picture_fondo.gif');
 }
 
-#Pets_selection {
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+#seleccionar-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title1,.title2 {
-    display: flex;
-    color: aliceblue;
-    background-color: rgba(9, 33, 71, 0.836);
-    padding: 10px;
-    width: 310px;
-    height: 59px;
-    border-width: 1px;
-    justify-content: center;
-    align-content: stretch;
-    align-items: flex-end;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    border-inline-start-color: rgb(0, 0, 0); 
-    box-shadow: 2px 4px 10px 4px rgba(119, 144, 192, 0.808);
-} 
-
-.subtitle1, .subtitle2 {
-font-size: 20px;
-width: 200px;
-height: 40px;
-display: flex;
-justify-content: center;
-color: rgba(240, 180, 15, 0.788);
-background-color:rgba(26, 66, 104, 0.904);
-border-radius: 20px;
-box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
+.titulo {
+  color: white;
+  font-size: 32px;
+  font-family: 'Fredoka One', cursive;
 }
 
-.cards, .cards_attacks{
-display: flex;
-gap: 10px;     
+.subtitulo {
+  color: white;
+  font-size: 20px;
 }
 
-.card_taoe {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    width: 150px;
-    height: 100px;
-    background-color: #948979;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 10px;
-    box-shadow: 2px 4px 10px 4px rgb(255, 255, 255);
-    border-radius: 20px;
+.tarjetas, .tarjetas-ataques {
+  display: flex;
+  gap: 10px;
 }
 
-.card_taoe img{
-    width: 60px;
-    height: 87px;
-    display: flex;
-    align-items: center;
+.tarjeta-de-mokepon {
+  width: 180px;
+  height: 120px;
+  background: #68946f;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 2px 4px 10px 4px rgb(230, 222, 210);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.tarjeta-de-mokepon img {
+  width: 80px;
+}
+
+#boton-mascota {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 30px;
 }
 
 input {
-    display: none; 
+  display: none;
 }
 
 input:checked + label {
-    background-color: rgb(10, 25, 75);
+  background-color: #5D8BF4;
 }
 
-/*------------------------------------------------Inicio de botton ---------------------------------------------------*/
-.button_select {
-    border-radius: 10px;
-    font-size: 13px;
-    font-family: cursive;
-    font-weight: bold;
-    color: aliceblue;
-    width: 110px;
-    height: 25px;
-    border-bottom-style: solid;
-    background-color: rgb(12, 179, 156, 0.5);
-    box-shadow: 2px 4px 10px 4px rgb(141, 209, 226);
-    border-inline-start-color: black; 
-    writing-mode: horizontal-tb;
-
-    /* Aplicando la animación */
-    animation-duration: 1.7s; /* Duración de la animación */
-    animation-name: fadeIn; /* Nombre de la animación */
-    animation-iteration-count: infinite; /* Repetir la animación infinitamente */
+#seleccionar-ataque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Definición de la animación */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.button_select:hover {
-    animation: none;
-}
-/* ----------------------------------------------------------- aqui termina la seccion del boton --------------------------------------- */
-
-
-#button_fire:hover{ 
-    background: url("./pictures/K98r.gif");
+.boton-de-ataque {
+  background-color: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 180px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-#button_water:hover{
-    background: url("./pictures/water.gif");
+#mensajes {
+  width: 280px;
+  background: #EEEEEE;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-#button_earth:hover {
-    background: url("./pictures/200w.gif");
+#boton-reiniciar {
+  border: none;
+  color: #11468F;
+  font-family: 'Poppins', sans-serif;
 }
 
-
-#attack_selection{
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.attacks_Panel{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-    
 .ataques {
-    color: aliceblue;
-    cursor: pointer;
-    font-size: 20px;
-    background-color: #948979;
-    border-radius: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    box-shadow: 2px 4px 10px 4px #DFD0B8;
-    border-inline-start-color: whitesmoke;
-    border-color: transparent;
-    width: 150px;
-    font-family: "Bebas Neue", sans-serif;
-    height: 50px;
-    margin: 10px;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  color: white;
 }
 
-#messages {
-    width: 250px;
-    height: 110px;
-    background-color: rgb(19, 46, 51);
-    box-shadow: 2px 4px 10px 4px #DFD0B8;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 20px;
-    display: flex;
-    font-size: 30px;
-    font-family: "Bebas Neue", sans-serif;
-    flex-wrap: nowrap;
+#vidas-jugador, #vidas-enemigo {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 360px) {
+  .tarjetas, .tarjetas-ataques {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  }
 }
-
-
-/* --------------------------------------------------- boton de reinicio-----------------------------------*/
-#button_reboot {
-    display: flex;
-    margin-top: -25px;
-    border-radius: 25px ;
-    color:white;
-    background-color: rgb(19, 46, 51);
-}
-
-/* --------------------------------------------------------- gameplay -----------------------------------*/
-
-.gamePlay {
-    display: grid;
-    grid-template-columns: 100px 100px;
-    justify-items: center;
-    outline-color: rgba(50, 115, 220, 0.3);
-    
-}
-
-.player_game,.enemy_game {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px; 
-    margin-top: 20px;
-    background-color: rgba(19, 46, 51, 0.521);
-    box-shadow: 2px 6px rgb(255, 254, 254);
-    border-radius: 20px;
-    align-items: center;
-}
-
-
-/* --------------------------------------------------------- responsive -----------------------------------*/
-
-@media (max-width: 360px ) {
-    .cards, .cards_attacks {
-        flex-direction: column;
-        align-items: center;
-    }
-
-}
-
-

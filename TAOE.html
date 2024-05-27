@@ -1,69 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAOE</title>
-    <link rel="stylesheet" href="./TAOE.css">
-    <!--tipografia -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
-    <!--tipografia -->
-    <link rel="icon" href="pictures/elementos.png" type="imagen/x-icon">   
-</head>
-<body>
-    <section id="Pets_selection">
-            <h1 class="title1">The Attack Of Elements! <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;🔥 💧 🌱 </h1> 
-            <h2 class="subtitle1"> choose your pet 🦊</h2>
-            <div id='contenedorCards' class="cards">
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>TAOE</title>
+        <link rel="stylesheet" href="./TAOE.css"> 
+        <link rel="icon" href="/pictures/elementos.png" type="image/png">
+    </head>
+    <body>
+        <section id="seleccionar-mascota">
+            <h1 class="titulo">Ataque de los elementos</h1> 
 
-             </div>
+            <h2 class="subtitulo">Elige tu mascota:</h2>
 
-            
-            <button class="button_select" id="button_pets"> Continuar </button> 
+            <div id='contenedorTarjetas' class="tarjetas">
+                
+            </div>
+
+            <button id="boton-mascota">Seleccionar</button>
         </section>
-        
- <!--segunda pantalla y seleccion de ataques -->
-    <section id="attack_selection">
 
-        <div class="attacks_Panel">
-            <h1 class="title2">The Attack Of Elements! <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;🔥 💧 🌱 </h1> 
-            
-            <h2 class="subtitle2"> choose your attack 💥 </h2>
+        <section id="seleccionar-ataque">
+            <h1 class="titulo">Ataque de los elementos</h1>
 
-            <div  id="contenedorAtaques" class="cards_attacks">   
-              <!--aqui estaban los ataques -->
-            </div> 
+            <h2 class="subtitulo">Elige tu ataque:</h2>
 
-            <div> 
-                <div id="messages">
-                    
-                    <p id="resultado"> &#160;&#160;Good Luck <br>💥👊🏻💥 </p>
-                    <section id="reboot">
-                        <button id="button_reboot">Reboot</button>
-                    </section>
-                </div>   
+            <div id='contenedorAtaques' class="tarjetas-ataques">
+
             </div>
 
-            <div class="gamePlay">
-                
-                <div class="player_game">
-                    <p id="player-lives">3</p>
-                    <p id="Petsplayer"></p>
-                    <div id="ataques_del_jugador"></div>
-                </div>
-                
-                <div class="enemy_game">
-                    <p id="enemy-lives">3</p>
-                    <p id="Petsenemy"></p> 
-                    <div id="ataques_del_enemigo"></div> 
-                </div>
-                
+            <div id="mensajes">
+                <p id="resultado">Mucha suerte</p>
+
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Reiniciar</button>
+                </section>
             </div>
-            
-        </div>
-    </section>  
-    <script src="./Js/TAOE.js"></script> 
-</body>
+
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">3</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">3</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>
+            </div>
+        </section>
+        <script src="./Js/TAOE.js"></script>
+    </body>
 </html>
