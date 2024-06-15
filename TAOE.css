@@ -62,7 +62,7 @@ input {
 }
 
 input:checked + label {
-  background-color: #5D8BF4;
+  background-color: #f87a05;
 }
 
 #seleccionar-ataque {
@@ -72,13 +72,13 @@ input:checked + label {
 }
 
 .boton-de-ataque {
-  background-color: #11468F;
+  background-color: #68946f;;
   padding: 10px;
   box-sizing: border-box;
   border-radius: 20px;
-  border-color: transparent;
-  width: 180px;
-  color: white;
+  border-color: white;
+  width: 80px;
+  color: #EEEEEE;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -95,8 +95,9 @@ input:checked + label {
 
 #boton-reiniciar {
   border: none;
-  color: #11468F;
+  color: black;
   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
 }
 
 .ataques {

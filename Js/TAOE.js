@@ -167,15 +167,18 @@ function secuenciaAtaque() {
             if (e.target.textContent === '🔥') {
                 ataqueJugador.push('FUEGO')
                 console.log(ataqueJugador)
-                boton.style.background = '#112f58'   
+                boton.style.background = '#EE3232'  
+                boton.disabled = true
             } else if (e.target.textContent === '💧') {
                 ataqueJugador.push('AGUA')
                 console.log(ataqueJugador)
-                boton.style.background = '#112f58'
+                boton.style.background = '#EE3232'
+                boton.disabled = true
             } else {
                 ataqueJugador.push('TIERRA')
                 console.log(ataqueJugador)
-                boton.style.background = '#112f58'
+                boton.style.background = '#EE3232'
+                boton.disabled = true
             }
             ataqueAleatorioEnemigo()
         })
@@ -191,7 +194,6 @@ function seleccionarMascotaEnemigo() {
     ataquesMonsterEnemigo = mokepones [mascotaAleatoria].ataques
     secuenciaAtaque()
 }
-
 
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(0,ataquesMonsterEnemigo.length -1)
@@ -225,8 +227,6 @@ function combate() {
         if(ataqueJugador[index] === ataqueEnemigo[index])  {
             indexAmbosOponentes(index, index)
             crearMensaje("EMPATE")
-            victoriasJugador++
-            spanVidasJugador.innerHTML = victoriasJugador
         } else if (ataqueJugador[index] === 'FUEGO' && ataqueEnemigo[index] === 'TIERRA' ) {
             indexAmbosOponentes(index,index)
             crearMensaje("GANASTE")
@@ -258,7 +258,7 @@ function revisarVidas() {
     } else if (victoriasJugador > victoriasEnemigo) {
         crearMensajeFinal("FELICITACIONES! GANASTE 😎")
     } else {
-        crearMensaje("LO SIENTO, PERO PERDISTE 😭")
+        crearMensajeFinal("LO SIENTO, PERO PERDISTE 😭")
     }
 }
 
@@ -281,12 +281,6 @@ function crearMensajeFinal(resultadoFinal) {
     
     sectionMensajes.innerHTML = resultadoFinal
 
-    
-    botonFuego.disabled = true
-    
-    botonAgua.disabled = true
-    
-    botonTierra.disabled = true
 
     
     sectionReiniciar.style.display = 'block'
