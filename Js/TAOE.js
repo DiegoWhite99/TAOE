@@ -22,7 +22,6 @@ const sectionVerMapa = document.getElementById('ver-mapa')
 const mapa = document.getElementById('mapa')
 
 
-
 let mokepones = []
 let ataqueJugador =[]
 let ataqueEnemigo = []
@@ -48,17 +47,30 @@ let lienzo = mapa.getContext("2d")
 let intervalo
 let mapBackground = new Image()
 mapBackground.src = '../pictures/mapas.jpg'
+let alturaQueBuscamos
+let anchoDelMapa = window.innerHeight - 20
+const anchoMaxmoDelMapa = 350
+
+if( anchoDelMapa > anchoMaxmoDelMapa ) {
+    anchoDelMapa = anchoMaxmoDelMapa - 20
+}
+
+alturaQueBuscamos = anchoDelMapa * 600 / 800
+
+mapa.width = anchoDelMapa
+mapa.height = alturaQueBuscamos
+
 
 class Mokepon {
-    constructor(nombre, foto, vida, fotoMapa, x = 10, y = 10) {
+    constructor(nombre, foto, vida, fotoMapa) {
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
         this.ataques = []
-        this.x = x
-        this.y = x
         this.ancho = 40
         this.alto = 40
+        this.x = aleatorio(0, mapa.width - this.ancho)
+        this.y = aleatorio(0, mapa.height - this.alto)
         this.mapaFoto = new Image()
         this.mapaFoto.src = fotoMapa
         this.velocidadX = 0
@@ -82,16 +94,12 @@ let capipepo = new Mokepon('Baine', './pictures/characters/vulpera-wow.gif', 5, 
 
 let ratigueya = new Mokepon('Tirion', './pictures/characters/world-of-warcraft-monster-warcraft-monster.gif', 5, '../pictures/characters/world-of-warcraft-monster-warcraft-monster.gif')
 
-let hipodogeEnemigo = new Mokepon('Falric', './pictures/characters/druid-cat-dance-druid.gif', 5, '../pictures/characters/druid-cat-dance-druid.gif',
-    80, 120)
+let hipodogeEnemigo = new Mokepon('Falric', './pictures/characters/druid-cat-dance-druid.gif', 5, '../pictures/characters/druid-cat-dance-druid.gif')
 
+let capipepoEnemigo = new Mokepon('Baine', './pictures/characters/vulpera-wow.gif', 5, '../pictures/characters/vulpera-wow.gif')
 
-let capipepoEnemigo = new Mokepon('Baine', './pictures/characters/vulpera-wow.gif', 5, '../pictures/characters/vulpera-wow.gif',
-    150, 95)
+let ratigueyaEnemigo = new Mokepon('Tirion', './pictures/characters/world-of-warcraft-monster-warcraft-monster.gif', 5, '../pictures/characters/world-of-warcraft-monster-warcraft-monster.gif')
 
-
-let ratigueyaEnemigo = new Mokepon('Tirion', './pictures/characters/world-of-warcraft-monster-warcraft-monster.gif', 5, '../pictures/characters/world-of-warcraft-monster-warcraft-monster.gif',
-    200, 190)
 
 
 
@@ -477,6 +485,7 @@ function revisarColision(enemigo){
         return;
     }
     detenerMovimiento()
+    clearInterval(intervalo)
     sectionSeleccionarAtaque.style.display = 'flex'
     sectionVerMapa.style.display = 'none'
     seleccionarMascotaEnemigo(enemigo)
