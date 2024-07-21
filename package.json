@@ -1,0 +1,19 @@
+{
+  "name": "taoe",
+  "version": "1.0.0",
+  "description": "juego basado en duelos estilo pokemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoWhite99/TAOE.git"
+  },
+  "author": "Diego Fernando Castelblanco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoWhite99/TAOE/issues"
+  },
+  "homepage": "https://github.com/DiegoWhite99/TAOE#readme"
+}
