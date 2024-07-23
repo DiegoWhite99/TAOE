@@ -88,17 +88,17 @@ class Mokepon {
     }
 }
 
-let hipodoge = new Mokepon('Falric', './pictures/characters/druid-cat-dance-druid.gif', 5, '../pictures/characters/druid-cat-dance-druid.gif ')
+let hipodoge = new Mokepon('Falric', '../pictures/cat.gif', 5, '../pictures/cat.gif')
 
-let capipepo = new Mokepon('Baine', './pictures/characters/vulpera-wow.gif', 5, '../pictures/characters/vulpera-wow.gif')
+let capipepo = new Mokepon('Baine', '../pictures/vulpira.gif', 5, '../pictures/vulpira.gif')
 
-let ratigueya = new Mokepon('Tirion', './pictures/characters/world-of-warcraft-monster-warcraft-monster.gif', 5, '../pictures/characters/world-of-warcraft-monster-warcraft-monster.gif')
+let ratigueya = new Mokepon('Tirion', '../pictures/centauro.gif', 5, '../pictures/centauro.gif')
 
-let hipodogeEnemigo = new Mokepon('Falric', './pictures/characters/druid-cat-dance-druid.gif', 5, '../pictures/characters/druid-cat-dance-druid.gif')
+let hipodogeEnemigo = new Mokepon('Falric', '../pictures/cat.gif', 5, '../pictures/cat.gif')
 
-let capipepoEnemigo = new Mokepon('Baine', './pictures/characters/vulpera-wow.gif', 5, '../pictures/characters/vulpera-wow.gif')
+let capipepoEnemigo = new Mokepon('Baine', '../pictures/vulpira.gif', 5, '../pictures/vulpira.gif')
 
-let ratigueyaEnemigo = new Mokepon('Tirion', './pictures/characters/world-of-warcraft-monster-warcraft-monster.gif', 5, '../pictures/characters/world-of-warcraft-monster-warcraft-monster.gif')
+let ratigueyaEnemigo = new Mokepon('Tirion', '../pictures/centauro.gif', 5, '../pictures/centauro.gif')
 
 
 
