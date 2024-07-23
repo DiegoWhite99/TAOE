@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DiegoWhite99/TAOE/issues"
   },
-  "homepage": "https://github.com/DiegoWhite99/TAOE#readme"
+  "homepage": "https://github.com/DiegoWhite99/TAOE#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
