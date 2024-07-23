@@ -46,7 +46,7 @@ let vidasEnemigo = 3
 let lienzo = mapa.getContext("2d")
 let intervalo
 let mapBackground = new Image()
-mapBackground.src = '../pictures/mapas.jpg'
+mapBackground.src = '../pictures/mapa.jpg'
 let alturaQueBuscamos
 let anchoDelMapa = window.innerHeight - 20
 const anchoMaxmoDelMapa = 350
