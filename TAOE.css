@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url('/pictures/picture_fondo.gif');
+  background-image: url('./pictures/picture_fondo.gif');
 }
 
 #seleccionar-mascota {

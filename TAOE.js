@@ -46,7 +46,7 @@ let vidasEnemigo = 3
 let lienzo = mapa.getContext("2d")
 let intervalo
 let mapBackground = new Image()
-mapBackground.src = '../pictures/mapa.jpg'
+mapBackground.src = './pictures/mapa.jpg'
 let alturaQueBuscamos
 let anchoDelMapa = window.innerHeight - 20
 const anchoMaxmoDelMapa = 350
@@ -88,17 +88,17 @@ class Mokepon {
     }
 }
 
-let hipodoge = new Mokepon('Falric', '../pictures/cat.gif', 5, '../pictures/cat.gif')
+let hipodoge = new Mokepon('Falric', './pictures/cat.gif', 5, './pictures/cat.gif')
 
-let capipepo = new Mokepon('Baine', '../pictures/vulpira.gif', 5, '../pictures/vulpira.gif')
+let capipepo = new Mokepon('Baine', './pictures/vulpira.gif', 5, './pictures/vulpira.gif')
 
-let ratigueya = new Mokepon('Tirion', '../pictures/centauro.gif', 5, '../pictures/centauro.gif')
+let ratigueya = new Mokepon('Tirion', './pictures/centauro.gif', 5, './pictures/centauro.gif')
 
-let hipodogeEnemigo = new Mokepon('Falric', '../pictures/cat.gif', 5, '../pictures/cat.gif')
+let hipodogeEnemigo = new Mokepon('Falric', './pictures/cat.gif', 5, './pictures/cat.gif')
 
-let capipepoEnemigo = new Mokepon('Baine', '../pictures/vulpira.gif', 5, '../pictures/vulpira.gif')
+let capipepoEnemigo = new Mokepon('Baine', './pictures/vulpira.gif', 5, './pictures/vulpira.gif')
 
-let ratigueyaEnemigo = new Mokepon('Tirion', '../pictures/centauro.gif', 5, '../pictures/centauro.gif')
+let ratigueyaEnemigo = new Mokepon('Tirion', './pictures/centauro.gif', 5, './pictures/centauro.gif')
 
 
 
