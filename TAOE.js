@@ -1,5 +1,3 @@
-
-
 const sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
 const sectionReiniciar = document.getElementById('reiniciar')
 const botonMascotaJugador = document.getElementById('boton-mascota')
@@ -195,7 +193,7 @@ function iniciarJuego() {
 }
 
 function unirseAlJuego () {
-    fetch ("http://localhost:8080/unirse")
+    fetch("http://localhost:8080/unirse")
         .then(function(res) {
             if (res.ok) {
                 res.text()
@@ -225,7 +223,7 @@ function seleccionarMascotaJugador() {
         alert('Selecciona una mascota')
     }
 
-    seleccionarMonster(mascotaJugador)
+    seleccionarMokepon(mascotaJugador)
 
     extraerAtaques(mascotaJugador)
     sectionVerMapa.style.display = 'flex'
@@ -233,19 +231,18 @@ function seleccionarMascotaJugador() {
     
 }
 
-function seleccionarMonster(mascotaJugador) {
-    fetch( `http://localhost:8080/Monster/${jugadorId}` , {
+function seleccionarMokepon(mascotaJugador) {
+    fetch(`http://localhost:8080/mokepon/${jugadorId}`, {
         method: "post",
         headers: {
-            "contet-Type": "application/json"
+            "content-Type": "aplicattion/jason"
         },
-        body:JSON.stringify({
-            Monster: mascotaJugador
+        body: JSON.stringify({
+            mokepon: mascotaJugador
         })
-    }
-    
-    )
+    })
 }
+
 
 function extraerAtaques(mascotaJugador) {
     let ataques
