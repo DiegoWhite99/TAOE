@@ -11,6 +11,7 @@ const jugadores = []
 class Jugador {
   constructor(id) {
     this.id = id
+    this.mokepon = null
   }
 
   asignarMokepon(mokepon) {

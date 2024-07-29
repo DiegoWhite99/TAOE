@@ -235,14 +235,13 @@ function seleccionarMokepon(mascotaJugador) {
     fetch(`http://localhost:8080/mokepon/${jugadorId}`, {
         method: "post",
         headers: {
-            "content-Type": "aplicattion/jason"
+            "Content-Type": "application/json"  // Corrección en el header
         },
         body: JSON.stringify({
             mokepon: mascotaJugador
         })
     })
 }
-
 
 function extraerAtaques(mascotaJugador) {
     let ataques
