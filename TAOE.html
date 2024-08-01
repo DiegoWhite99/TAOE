@@ -9,21 +9,21 @@
 
     </head>
     <body>
-        <section id="seleccionar-mascota">
+        <section id="seleccionar-mascota">   <!--configuracion en JS para poder almacenar nuevos elementos -->
             <h1 class="titulo">Ataque de los elementos</h1> 
 
             <h2 class="subtitulo">Elige tu mascota:</h2>
 
-            <div id='contenedorTarjetas' class="tarjetas">
+            <div id='contenedorTarjetas' class="tarjetas">  <!-- aqui va el id y la clase donde se inyecta la funcionalidad desde TAOE.js-->
                 
             </div>
 
-            <button id="boton-mascota">Seleccionar</button>
+            <button id="boton-mascota">Seleccionar</button> 
         </section>
 
         <section id="ver-mapa" >
-            <h2 class="subtitulo">Recorre el mapa con tu Monter Mitology </h2>
-            <canvas id="mapa"></canvas>
+            <h2 class="subtitulo">Recorre el mapa con tu Monster Mitology </h2>
+            <canvas id="mapa"></canvas>   <!-- se crea el id parea la configuracion del mapa -->
             <button onmouseup="detenerMovimiento()"  onmousedown="moverArriba()">Arriba</button>
             <div>
                 <button onmouseup="detenerMovimiento()"  onmousedown="moverIzquierda()">Izquierda</button>

@@ -32,7 +32,7 @@ let inputRatigueya
 let mascotaJugador
 let mascotaJugadorObjeto
 let ataquesMokepon
-let ataquesMkeponEnemigo
+let ataquesMokeponEnemigo
 let botonFuego
 let botonAgua
 let botonTierra
@@ -43,7 +43,7 @@ let victoriasJugador = 0
 let victoriasEnemigo = 0
 let vidasJugador = 3
 let vidasEnemigo = 3
-let lienzo = mapa.getContext("2d")
+let lienzo = mapa.getContext("2d") // profundizar
 let intervalo
 let mapBackground = new Image()
 mapBackground.src = './pictures/mapa.jpg'
@@ -99,9 +99,6 @@ let hipodogeEnemigo = new Mokepon('Falric', './pictures/cat.gif', 5, './pictures
 let capipepoEnemigo = new Mokepon('Baine', './pictures/vulpira.gif', 5, './pictures/vulpira.gif')
 
 let ratigueyaEnemigo = new Mokepon('Tirion', './pictures/centauro.gif', 5, './pictures/centauro.gif')
-
-
-
 
 
 
@@ -177,6 +174,7 @@ function iniciarJuego() {
      inputHipodoge = document.getElementById('Falric')
      inputCapipepo = document.getElementById('Baine')
      inputRatigueya = document.getElementById('Tirion')
+     
 
     })
     
